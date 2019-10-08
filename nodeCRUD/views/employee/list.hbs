@@ -1,0 +1,28 @@
+
+<a class="btn btn-lg btn-dark  text-light" href="/employee">Novo</a>
+<table class="table table-light table-bordered">
+    <tr>
+        <thead>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Cidade</th>
+        <th></th>
+        </thead>
+    </tr>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.city}}</td>
+            <td>
+                <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg"></i></a>
+                <a href="/employee/{{this._id}}/delete"><i class="fa fa-trash fa-lg text-danger"></i></a>    
+            </td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>

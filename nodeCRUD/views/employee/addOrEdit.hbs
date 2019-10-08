@@ -1,0 +1,29 @@
+<h3 class="text-light">{{viewTitle}}</h3>
+
+<form style="background-color: white" class="px-3 py-3 rounded border" method="POST"
+{{#if employee._id}}
+ action="/employee/{{employee._id}}">
+ {{else}}
+ action="/employee/{{employee._id}}">
+ {{/if}}
+    <div class="form-group">
+        <label>Nome Completo</label>
+        <input type="text" class="form-control form-control-lg" name="fullName" value="{{employee.fullName}}">
+    </div>
+        <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control form-control-lg" name="email" value="{{employee.email}}">
+    </div>
+        <div class="form-group">
+        <label>Mobile</label>
+        <input type="text" class="form-control form-control-lg" name="mobile" value="{{employee.mobile}}">
+            <div class="form-group">
+        <label>Cidade</label>
+        <input type="text" class="form-control form-control-lg" name="city" value="{{employee.city}}">
+    </div>
+        <div class="form-group">
+        <input type="submit" value="Salvar" class="btn btn-success btn-lg">
+        <a class="btn btn-dark btn-lg" href="/employee/list">Voltar</a>
+    </div>
+    </div>
+</form>
